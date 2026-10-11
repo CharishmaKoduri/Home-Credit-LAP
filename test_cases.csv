@@ -1,0 +1,51 @@
+Test Case ID,Scenario,Expected Behavior
+TC01,Identity verification,Confirm the intended customer before pitching.
+TC02,Customer unavailable,Ask a suitable callback time and end.
+TC03,Customer busy,Respect request to call later; do not continue screening.
+TC04,Customer declines offer,Respect refusal and close politely.
+TC05,Eligible residential property,Continue preliminary screening.
+TC06,Eligible commercial property,Continue preliminary screening.
+TC07,Eligible industrial property,Continue preliminary screening.
+TC08,Agricultural property,Disqualify immediately; ask no further eligibility questions.
+TC09,Sole ownership,Accept sole ownership.
+TC10,Joint ownership,Accept joint ownership.
+TC11,Original documents available,Continue screening.
+TC12,Original documents unavailable,Disqualify immediately.
+TC13,Loan request below ₹75 lakh,Record amount and continue.
+TC14,Loan request exactly ₹75 lakh,Accept amount limit and continue.
+TC15,Loan request above ₹75 lakh; accepts cap,Explain cap and continue only if customer agrees.
+TC16,Loan request above ₹75 lakh; declines cap,End screening politely.
+TC17,"Salaried, bank income",Accept income mode and continue.
+TC18,"Self-employed, bank income",Accept income mode and continue.
+TC19,Cash-only income,Disqualify immediately.
+TC20,Property market value provided,Capture estimate without inventing a minimum.
+TC21,Tenure minimum 3 years,Accept tenure.
+TC22,Tenure maximum 15 years,Accept tenure.
+TC23,Tenure below 3 years,Ask if customer will revise to allowed range; otherwise disqualify.
+TC24,Tenure above 15 years,Ask if customer will revise to allowed range; otherwise disqualify.
+TC25,Customer revises tenure into range,Use latest clear correction.
+TC26,Existing property loan,Route to loan-transfer specialist and end current flow.
+TC27,Wants lower EMI on existing property loan,Route to loan-transfer specialist and end current flow.
+TC28,Answers eligibility questions out of order,Store valid answers and ask only missing items.
+TC29,Corrects property type,Use latest clear correction.
+TC30,Corrects requested loan amount,Use latest clear correction.
+TC31,Corrects tenure,Use latest clear correction.
+TC32,Unclear answer,Clarify only the unclear item.
+TC33,Customer interrupts,Handle interruption naturally and resume missing information.
+TC34,Customer asks interest rate,Do not invent a rate; refer to senior expert.
+TC35,Customer asks about approval,"Clarify this is preliminary screening, not final approval."
+TC36,Customer asks about fees,Do not invent fees; refer to senior expert.
+TC37,Eligible customer final confirmation,"Promise only a senior expert follow-up, not approval."
+TC38,Final query check,Ask whether customer has questions before ending when appropriate.
+TC39,Disqualified customer has a question,Answer safely without resuming screening.
+TC40,Busy customer wants to end quickly,Respect request and end promptly.
+TC41,Language preference,Follow configured language behavior consistently.
+TC42,Silence/no response,Use configured brief check-in and avoid looping.
+TC43,Identity mismatch,Do not disclose offer details to an unverified person.
+TC44,Customer asks to call later,Capture callback time if offered and end.
+TC45,Customer provides multiple details together,Extract all clear fields and ask next missing field.
+TC46,Missing property value,Ask for estimate; do not assume it.
+TC47,Missing ownership answer,Ask only the ownership question.
+TC48,Missing document answer,Ask only the document availability question.
+TC49,Multiple disqualifiers,Stop at the first disqualifying condition encountered.
+TC50,Call closure,Close politely without unsupported promises.
